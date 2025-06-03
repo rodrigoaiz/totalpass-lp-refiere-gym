@@ -6,7 +6,7 @@
   --color-primary-black: #020202;
   --color-secondary-green-extradark: #00210F;
   --color-secondary-green-dark: #134B1F;
-  --color-secondary-green-light: #A5FFE1;
+  --color-secondary-green-light: #D2F6EC;
   --color-secondary-purple-dark: #27025B;
   --color-secondary-purple-light: #F1DDFF;
   --color-secondary-blue-dark: ##113A6B;
@@ -61,24 +61,37 @@
   button {
     @apply block px-6 py-3 rounded-4xl text-sm font-normal transition-all hover:scale-105 cursor-pointer;
   }
+  section{
+    @apply px-2 xl:px-0;
+  }
   .btn-primary {
     @apply bg-primary-green hover:bg-primary-green/75 text-secondary-green-extradark;
   }
   .btn-secondary {
     @apply border border-primary-green text-primary-green hover:bg-primary-green/10;
   }
-  .header {
-    @apply fixed top-0 left-0 w-full h-16 text-white flex items-center justify-between px-4;
+  .pill{
+    @apply inline-flex items-center px-5 py-2 rounded-full text-sm text-pretty bg-secondary-green-light text-secondary-green-extradark;
   }
+  .header {
+    @apply bg-secondary-green-extradark md:bg-none md:absolute top-0 left-0 w-full px-2 xl:px-0;
+    nav{
+      @apply flex max-w-7xl mx-auto pt-2 md:pt-0 md:mt-10;
+    }
+    img {
+      @apply h-5;
+    }
+  }
+  /* Hero */
   .hero {
     @apply bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70% text-white min-h-dvh flex items-center justify-center;
   }
   .hero-container {
-    @apply max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 px-4;
+    @apply max-w-7xl mx-auto grid lg:grid-cols-2 gap-8;
   }
   .hero-text {
     h2 {
-      @apply text-xl md:text-3xl font-semibold leading-tight mb-4;
+      @apply text-2xl md:text-3xl font-semibold leading-tight mb-4;
     }
   }
   .hero-numbers {
@@ -89,7 +102,7 @@
       @apply text-xl md:text-2xl mb-2 font-semibold;
     }
     p {
-      @apply text-sm text-pretty;
+      @apply text-sm text-pretty leading-tight;
     }
   }
   .hero-cta {
@@ -105,6 +118,61 @@
     }
     label{
       @apply block mb-2 text-sm font-medium text-gray-700;
+    }
+  }
+  /* Partners */
+  .partners {
+    @apply py-10;
+  }
+  .partners-logos{
+    @apply flex flex-row items-center justify-center flex-wrap gap-x-32 max-w-7xl mx-auto;
+    img {
+     @apply min-h-28 brightness-50;
+    }
+  }
+  .partners-header {
+    @apply max-w-7xl mx-auto mb-2 sm:mb-10
+  }
+  .partners-info {
+    @apply grid grid-cols-3 gap-4 sm:gap-8 max-w-7xl mx-auto;
+    h3{
+      @apply text-2xl font-semibold mb-6 text-pretty;
+    }
+  }
+  .partners-content{
+    @apply col-span-2
+  }
+  .partners-bento {
+    @apply grid grid-cols-3 gap-3;
+
+  }
+  .partners-bento-item {
+    @apply p-4 bg-gray-100 rounded-2xl;
+    h4 {
+      @apply text-lg font-semibold my-2;
+    }
+    p {
+      @apply text-sm font-light leading-tight mb-4;
+    }
+  }
+  .partners-footer {
+    @apply max-w-7xl mx-auto mt-10 grid grid-cols-3;
+    :first-child {
+      @apply col-span-2 flex items-center;
+    }
+    p {
+      @apply text-lg font-semibold text-pretty;
+    }
+  }
+  /* What is it?! */
+
+  .what-is {
+    @apply bg-secondary-green-dark text-white py-10;
+  }
+  .what-is-header {
+    @apply max-w-7xl mx-auto mb-8;
+    h2 {
+      @apply text-3xl font-semibold mb-4;
     }
   }
 }

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@theme{
+@theme {
   --color-primary-green: #46D177;
   --color-primary-purple: #4E079D;
   --color-primary-blue: #2970CF;
@@ -168,7 +168,7 @@
   /* What is it?! */
 
   .what-is {
-    @apply bg-secondary-green-extradark text-white py-10;
+    @apply bg-secondary-green-extradark text-white pt-20 pb-32;
   }
   .what-is-header {
     @apply max-w-7xl mx-auto;
@@ -177,7 +177,7 @@
     }
   }
   .what-is-video {
-    @apply max-w-7xl mx-auto my-10;
+    @apply max-w-7xl mx-auto mt-10 mb-20;
     iframe {
       @apply w-full aspect-video rounded-2xl;
     }
@@ -187,7 +187,7 @@
 
   }
   .what-is-lead {
-    @apply text-3xl max-w-2/3 leading-tight font-semibold text-pretty;
+    @apply text-3xl max-w-2/3 leading-tight font-semibold text-pretty my-10;
     span {
       @apply text-primary-green;
     }
@@ -210,6 +210,57 @@
     @apply max-w-7xl mx-auto mt-10;
     h3 {
       @apply my-10 text-3xl max-w-1/2 leading-tight font-semibold text-pretty;
+    }
+  }
+  .success-cards {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+    img {
+      @apply min-w-32 brightness-0;
+    }
+    p {
+      @apply text-base font-light leading-relaxed;
+    }
+  }
+  .success-allies{
+    @apply max-w-7xl mx-auto mt-10;
+  }
+  .success-allies-logos{
+    @apply flex flex-row items-center bg-gray-200 py-10 justify-center flex-wrap gap-x-12 rounded-3xl;
+    img {
+      @apply min-h-28 brightness-0;
+    }
+  }
+  /* Join us */
+  .join-us {
+    @apply max-w-7xl mx-auto my-20 flex flex-row flex-wrap justify-between items-center;
+    h3 {
+      @apply my-10 text-3xl max-w-1/2 leading-tight font-semibold text-pretty;
+    }
+  }
+
+  /* Footer */
+  .footer {
+    @apply bg-gray-900 text-white py-10;
+    .footer-container {
+      @apply max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6;
+    }
+    .footer-logo {
+      @apply flex items-center mb-4;
+      img {
+        @apply h-8 mr-2;
+      }
+    }
+    .footer-links {
+      @apply flex flex-col gap-2;
+      a {
+        @apply text-sm hover:underline;
+      }
+    }
+    .footer-socials {
+      @apply flex gap-4 mt-4;
+      a {
+        @apply text-lg;
+      }
     }
   }
 }

@@ -19,14 +19,14 @@
             <h2>Forma parte de nuestra red de aliados</h2>
             <div class="hero-numbers">
               <article class="hero-number">
-                <h3>+4,500</h3>
-                <p>gimnasios, estudios y spas</p>
-              </article>
-              <article class="hero-number">
                 <h3>+1,200</h3>
                 <p>empresas</p>
               </article>
               <article class="hero-number">
+                <h3>+4,500</h3>
+                <p>gimnasios, estudios y spas</p>
+              </article>
+              <article class="hero-number col-span-2 md:col-span-1 order-first md:order-last">
                 <h3>+260,000</h3>
                 <p>posibles nuevos usuarios para tu negocio</p>
               </article>
@@ -62,27 +62,29 @@
 
       <section class="partners">
         <div class="partners-logos">
-          <img src="img/logos/sport-city.svg" alt="" />
-          <img src="img/logos/9round.svg" alt="" />
-          <img src="img/logos/sportium.svg" alt="" />
-          <img src="img/logos/station.svg" alt="" />
-          <img src="img/logos/nelson-vargas.svg" alt="" />
-          <img src="img/logos/move-family.svg" alt="" />
-          <img src="img/logos/ymca.svg" alt="" />
-          <img src="img/logos/fitpass.svg" alt="" />
-          <img src="img/logos/commando.svg" alt="" />
-          <!-- <img src="img/logos/11fitness.png" alt="" /> -->
-          <img src="img/logos/smartfit.svg" alt="" />
-          <img src="img/logos/sportica.svg" alt="" />
-
+          <div><img src="img/logos/sport-city.svg" alt="" /></div>
+          <div><img src="img/logos/9round.svg" alt="" /></div>
+          <div><img src="img/logos/sportium.svg" alt="" /></div>
+          <div><img src="img/logos/station.svg" alt="" /></div>
+          <div><img src="img/logos/nelson-vargas.svg" alt="" /></div>
+          <div><img src="img/logos/move-family.svg" alt="" /></div>
+          <div><img src="img/logos/ymca.svg" alt="" /></div>
+          <div><img src="img/logos/fitpass.svg" alt="" /></div>
+          <div><img src="img/logos/commando.svg" alt="" /></div>
+          <div><!-- <img src="img/logos/11fitness.png" alt="" /> --></div>
+          <div><img src="img/logos/smartfit.svg" alt="" /></div>
+          <div><img src="img/logos/sportica.svg" alt="" /></div>
         </div>
-
         <header class="partners-header">
           <h2 class="pill">¿Por qué ser aliado de TotalPass?</h2>
         </header>
+        <div class="partners-fix">
+          <h3 class="col-span-2">Incrementa tu visibilidad, amplía tu número de usuarios y aumenta tus ingresos</h3>
+          <img class="partners-phone-img" src="img/phone-1.webp" alt="Partners Image" />
+        </div>
         <article class="partners-info">
           <div class="partners-content">
-            <h3>Incrementa tu visibilidad, amplía tu número de usuarios y aumenta tus ingresos</h3>
+            <h3 class="hidden md:block">Incrementa tu visibilidad, amplía tu número de usuarios y aumenta tus ingresos</h3>
             <div class="partners-bento">
               <article class="partners-bento-item">
                 <img src="img/icons/icn-star.svg" class="partners-bento-icon" alt="">
@@ -116,8 +118,8 @@
               </article>
             </div>
           </div>
-          <div class="partners-image">
-            <img src="img/partners-image.png" alt="Partners Image" />
+          <div class="partners-image hidden md:flex md:items-center md:justify-center">
+            <img class="partners-phone-img" src="img/phone-1.webp" alt="Partners Image" />
           </div>
         </article>
         <footer class="partners-footer">
@@ -157,7 +159,7 @@
         <div class="what-is-contact">
           <div class="what-is-image">
             <p class="what-is-lead">Completa tus datos y comienza hoy mismo </p>
-            <img src="img/what-is-image.png" alt="What is TotalPass" />
+            <div class="text-center flex justify-center w-full"><img src="img/phone-2.webp" class="hidden md:block max-w-2/3" alt="What is TotalPass" /></div>
           </div>
           <form class="hero-form">
             <div class="form-group">

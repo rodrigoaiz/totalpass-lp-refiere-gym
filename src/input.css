@@ -250,9 +250,15 @@
     @apply max-w-7xl mx-auto mt-10;
   }
   .success-allies-logos{
-    @apply flex flex-row items-center bg-gray-200 py-10 justify-center flex-wrap gap-x-12 rounded-3xl;
+    @apply bg-gray-200 py-5 px-5 md:py-10 md:px-5 rounded-3xl flex items-center ;
+    div {
+      @apply grid grid-cols-2 md:grid-cols-4  gap-x-12 gap-y-5 w-full text-center;
+      article {
+        @apply flex items-center justify-center;
+      }
+    }
     img {
-      @apply min-h-28 brightness-0;
+      @apply max-h-14 brightness-0;
     }
   }
   /* Join us */

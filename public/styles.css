@@ -464,11 +464,11 @@
     padding-top: calc(var(--spacing) * 5);
     padding-bottom: calc(var(--spacing) * 5);
     color: var(--color-white);
-    @media (width >= 48rem) {
-      padding-bottom: calc(var(--spacing) * 0);
-    }
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 0);
+    }
+    @media (width >= 80rem) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .hero-container {

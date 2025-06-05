@@ -33,29 +33,153 @@
             </div>
 
             <div class="hero-cta">
-              <button class="btn-primary">Descubrir más</button>
-              <button class="btn-secondary">Contactar a un ejecutivo</button>
+              <button class="btn-primary btn-xl">Descubrir más</button>
+              <button class="btn-secondary btn-xl">Contactar a un ejecutivo</button>
             </div>
           </div>
           <aside class="hero-form">
-            <form class="form">
-              <h3>Si tienes un gimnasio, estudio o spa... ¡ÚNETE AHORA!</h3>
+            <h3>Si tienes un gimnasio, estudio o spa... ¡ÚNETE AHORA!</h3>
+              <div class="form-container">
+                <form
+                action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                method="POST"
+                >
+                  <input type="hidden" name="oid" value="TU_ORG_ID_SALESFORCE">
+                  <input type="hidden" name="retURL" value="https://">
+                  <div class="form-grid md:grid grid-cols-2 gap-x-8">
+                    <article>
+                      <div class="mb-6">
+                        <div class="mb-4">
+                          <label for="nombre_completo">Nombre completo del dueño *</label>
+                          <input
+                            id="nombre_completo"
+                            name="nombre_completo"
+                            type="text"
+                            placeholder="Ej. Juan Pérez López"
+                            required
+                          >
+                        </div>
 
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
+                        <div class="mb-4">
+                          <label for="telefono">Teléfono del dueño *</label>
+                          <input
+                            id="telefono"
+                            name="telefono"
+                            type="tel"
+                            placeholder="Ej. 5512345678"
+                            pattern="[0-9]{10}"
+                            required
+                          >
+                          <p class="text-gray-500 text-xs mt-1">Formato: 10 dígitos sin espacios</p>
+                        </div>
 
-              <button type="submit" class=" btn-primary">Enviar</button>
-            </form>
+                        <div class="mb-4">
+                          <label for="email">Email del dueño o gimnasio/estudio *</label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="ejemplo@dominio.com"
+                            required
+                          >
+                        </div>
+                      </div>
+
+                      <div class="mb-6">
+                        <div class="mb-4">
+                          <label for="tipo_inscripcion">Tipo de inscripción de tu gimnasio/estudio *</label>
+                          <select id="tipo_inscripcion" name="tipo_inscripcion" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Membresía mensual">Membresía mensual</option>
+                            <option value="Clases sueltas">Clases sueltas</option>
+                            <option value="Ambos">Ambos</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="tipo_servicio">Tipo de servicio de tu gimnasio/estudio *</label>
+                          <select id="tipo_servicio" name="tipo_servicio" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Gimnasio tradicional">Gimnasio tradicional</option>
+                            <option value="Estudio de crossfit">Estudio de crossfit</option>
+                            <option value="Yoga/Pilates">Yoga/Pilates</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="numero_sucursales">Número de sucursales de tu gimnasio/estudio *</label>
+                          <input
+                            id="numero_sucursales"
+                            name="numero_sucursales"
+                            type="number"
+                            min="1"
+                            placeholder="Ej. 2"
+                            required
+                          >
+                        </div>
+                      </div>
+                    </article>
+                    <article>
+                      <div class="mb-6">
+                        <div class="mb-4">
+                          <label for="conoces_totalpass">¿Conoces TotalPass? *</label>
+                          <select id="conoces_totalpass" name="conoces_totalpass" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Sí">Sí</option>
+                            <option value="No">No</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="afiliar">¿Quieres afiliar tu gimnasio/estudio a la red? *</label>
+                          <select id="afiliar" name="afiliar" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Sí, estoy interesado">Sí, estoy interesado</option>
+                            <option value="No, solo información">No, solo información</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="nombre_gym">Nombre de tu gimnasio/estudio *</label>
+                          <input
+                            id="nombre_gym"
+                            name="nombre_gym"
+                            type="text"
+                            placeholder="Ej. Fitness Revolution"
+                            required
+                          >
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="estado">Estado *</label>
+                          <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecciona tu estado</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="Jalisco">Jalisco</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="redes_sociales">Redes sociales de tu gimnasio/estudio</label>
+                          <input
+                            id="redes_sociales"
+                            name="redes_sociales"
+                            type="text"
+                            placeholder="Ej: @fitnessrevolution"
+                          >
+                        </div>
+                      </div>
+                      <button class="btn-primary" type="submit">Enviar Solicitud</button>
+                    </article>
+                  </div>
+
+                  <!-- Sección Gimnasio/Estudio -->
+
+
+                  <!-- Sección Detalles -->
+
+                </form>
+              </div>
           </aside>
         </div>
       </section>
@@ -161,21 +285,149 @@
             <p class="what-is-lead">Completa tus datos y comienza hoy mismo </p>
             <div class="text-center flex justify-center w-full"><img src="img/phone-2.webp" class="hidden md:block max-w-2/3" alt="What is TotalPass" /></div>
           </div>
-          <form class="hero-form">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" required />
+          <div class="hero-form">
+            <div class="form-container">
+              <form
+              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+              method="POST"
+              >
+                <input type="hidden" name="oid" value="TU_ORG_ID_SALESFORCE">
+                <input type="hidden" name="retURL" value="https://tudominio.com/gracias">
+                <div class="form-grid md:grid grid-cols-2 gap-x-8">
+                  <article>
+                    <div class="mb-6">
+                      <div class="mb-4">
+                        <label for="nombre_completo">Nombre completo del dueño *</label>
+                        <input
+                          id="nombre_completo"
+                          name="nombre_completo"
+                          type="text"
+                          placeholder="Ej. Juan Pérez López"
+                          required
+                        >
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="telefono">Teléfono del dueño *</label>
+                        <input
+                          id="telefono"
+                          name="telefono"
+                          type="tel"
+                          placeholder="Ej. 5512345678"
+                          pattern="[0-9]{10}"
+                          required
+                        >
+                        <p class="text-gray-500 text-xs mt-1">Formato: 10 dígitos sin espacios</p>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="email">Email del dueño o gimnasio/estudio *</label>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="ejemplo@dominio.com"
+                          required
+                        >
+                      </div>
+                    </div>
+
+                    <div class="mb-6">
+                      <div class="mb-4">
+                        <label for="tipo_inscripcion">Tipo de inscripción de tu gimnasio/estudio *</label>
+                        <select id="tipo_inscripcion" name="tipo_inscripcion" required>
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="Membresía mensual">Membresía mensual</option>
+                          <option value="Clases sueltas">Clases sueltas</option>
+                          <option value="Ambos">Ambos</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="tipo_servicio">Tipo de servicio de tu gimnasio/estudio *</label>
+                        <select id="tipo_servicio" name="tipo_servicio" required>
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="Gimnasio tradicional">Gimnasio tradicional</option>
+                          <option value="Estudio de crossfit">Estudio de crossfit</option>
+                          <option value="Yoga/Pilates">Yoga/Pilates</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="numero_sucursales">Número de sucursales de tu gimnasio/estudio *</label>
+                        <input
+                          id="numero_sucursales"
+                          name="numero_sucursales"
+                          type="number"
+                          min="1"
+                          placeholder="Ej. 2"
+                          required
+                        >
+                      </div>
+                    </div>
+                  </article>
+                  <article>
+                    <div class="mb-6">
+                      <div class="mb-4">
+                        <label for="conoces_totalpass">¿Conoces TotalPass? *</label>
+                        <select id="conoces_totalpass" name="conoces_totalpass" required>
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="Sí">Sí</option>
+                          <option value="No">No</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="afiliar">¿Quieres afiliar tu gimnasio/estudio a la red? *</label>
+                        <select id="afiliar" name="afiliar" required>
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="Sí, estoy interesado">Sí, estoy interesado</option>
+                          <option value="No, solo información">No, solo información</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="nombre_gym">Nombre de tu gimnasio/estudio *</label>
+                        <input
+                          id="nombre_gym"
+                          name="nombre_gym"
+                          type="text"
+                          placeholder="Ej. Fitness Revolution"
+                          required
+                        >
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="estado">Estado *</label>
+                        <select id="estado" name="estado" required>
+                          <option value="" disabled selected>Selecciona tu estado</option>
+                          <option value="CDMX">Ciudad de México</option>
+                          <option value="Jalisco">Jalisco</option>
+                        </select>
+                      </div>
+
+                      <div class="mb-4">
+                        <label for="redes_sociales">Redes sociales de tu gimnasio/estudio</label>
+                        <input
+                          id="redes_sociales"
+                          name="redes_sociales"
+                          type="text"
+                          placeholder="Ej: @fitnessrevolution"
+                        >
+                      </div>
+                    </div>
+                    <button class="btn-primary" type="submit">Enviar Solicitud</button>
+                  </article>
+                </div>
+
+                <!-- Sección Gimnasio/Estudio -->
+
+
+                <!-- Sección Detalles -->
+
+              </form>
             </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Teléfono</label>
-              <input type="tel" id="phone" name="phone" required />
-            </div>
-            <button type="submit" class="btn-primary">Enviar</button>
-          </form>
+          </div>
         </div>
       </section>
       <section class="success">

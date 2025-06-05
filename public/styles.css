@@ -10,12 +10,15 @@
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -208,6 +211,15 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .flex {
     display: flex;
   }
@@ -229,11 +241,24 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .justify-center {
     justify-content: center;
   }
+  .gap-x-8 {
+    column-gap: calc(var(--spacing) * 8);
+  }
   .text-center {
     text-align: center;
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
   }
   .md\:order-last {
     @media (width >= 48rem) {
@@ -253,6 +278,11 @@
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
+    }
+  }
+  .md\:grid {
+    @media (width >= 48rem) {
+      display: grid;
     }
   }
   .md\:items-center {
@@ -363,6 +393,12 @@
       }
     }
   }
+  .btn-xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
   .pill {
     display: inline-flex;
     align-items: center;
@@ -383,30 +419,30 @@
     width: 100%;
     background-color: var(--color-secondary-green-extradark);
     padding-inline: calc(var(--spacing) * 2);
-    @media (width >= 48rem) {
+    @media (width >= 96rem) {
       position: absolute;
     }
-    @media (width >= 48rem) {
+    @media (width >= 96rem) {
       background-image: none;
     }
-    @media (width >= 80rem) {
+    @media (width >= 96rem) {
       padding-inline: calc(var(--spacing) * 0);
     }
     nav {
       margin-inline: auto;
       display: flex;
       padding-top: calc(var(--spacing) * 2);
-      @media (width >= 48rem) {
-        margin-top: calc(var(--spacing) * 10);
-      }
-      @media (width >= 48rem) {
-        max-width: calc(4/5 * 100%);
-      }
-      @media (width >= 48rem) {
-        padding-top: calc(var(--spacing) * 0);
-      }
       @media (width >= 64rem) {
         max-width: calc(11/12 * 100%);
+      }
+      @media (width >= 96rem) {
+        margin-top: calc(var(--spacing) * 10);
+      }
+      @media (width >= 96rem) {
+        max-width: calc(4/5 * 100%);
+      }
+      @media (width >= 96rem) {
+        padding-top: calc(var(--spacing) * 0);
       }
     }
     img {
@@ -440,19 +476,35 @@
     display: grid;
     row-gap: calc(var(--spacing) * 4);
     @media (width >= 48rem) {
-      max-width: calc(4/5 * 100%);
+      margin-top: calc(var(--spacing) * 5);
+    }
+    @media (width >= 64rem) {
+      width: 100%;
     }
     @media (width >= 64rem) {
       max-width: calc(11/12 * 100%);
     }
     @media (width >= 64rem) {
+      column-gap: calc(var(--spacing) * 10);
+    }
+    @media (width >= 80rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    @media (width >= 64rem) {
-      column-gap: calc(var(--spacing) * 10);
+    @media (width >= 96rem) {
+      max-width: calc(4/5 * 100%);
     }
   }
   .hero-text {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    @media (width >= 80rem) {
+      display: flex;
+    }
+    @media (width >= 96rem) {
+      row-gap: calc(var(--spacing) * 14);
+    }
     h2 {
       margin-bottom: calc(var(--spacing) * 4);
       font-size: var(--text-3xl);
@@ -465,7 +517,10 @@
         font-size: var(--text-4xl);
         line-height: var(--tw-leading, var(--text-4xl--line-height));
       }
-      @media (width >= 80rem) {
+      @media (width >= 96rem) {
+        max-width: calc(2/3 * 100%);
+      }
+      @media (width >= 96rem) {
         font-size: var(--text-5xl);
         line-height: var(--tw-leading, var(--text-5xl--line-height));
       }
@@ -489,13 +544,17 @@
   .hero-number {
     h3 {
       margin-bottom: calc(var(--spacing) * 2);
-      font-size: var(--text-xl);
-      line-height: var(--tw-leading, var(--text-xl--line-height));
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
       --tw-font-weight: var(--font-weight-semibold);
       font-weight: var(--font-weight-semibold);
       @media (width >= 48rem) {
         font-size: var(--text-2xl);
         line-height: var(--tw-leading, var(--text-2xl--line-height));
+      }
+      @media (width >= 80rem) {
+        font-size: var(--text-4xl);
+        line-height: var(--tw-leading, var(--text-4xl--line-height));
       }
     }
     p {
@@ -507,6 +566,10 @@
       text-wrap: pretty;
       @media (width >= 48rem) {
         margin-right: calc(var(--spacing) * 0);
+      }
+      @media (width >= 80rem) {
+        font-size: var(--text-base);
+        line-height: var(--tw-leading, var(--text-base--line-height));
       }
     }
   }
@@ -536,7 +599,7 @@
       --tw-font-weight: var(--font-weight-semibold);
       font-weight: var(--font-weight-semibold);
     }
-    input, textarea {
+    input, textarea, select {
       margin-bottom: calc(var(--spacing) * 2);
       width: 100%;
       border-radius: var(--radius-lg);
@@ -566,6 +629,9 @@
       --tw-font-weight: var(--font-weight-medium);
       font-weight: var(--font-weight-medium);
       color: var(--color-gray-700);
+    }
+    button[type="submit"] {
+      margin-inline: auto;
     }
   }
   .partners {

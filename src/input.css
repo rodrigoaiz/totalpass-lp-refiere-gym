@@ -71,13 +71,16 @@
   .btn-secondary {
     @apply border border-primary-green text-primary-green hover:bg-primary-green/10;
   }
+  .btn-xl {
+    @apply xl:text-xl;
+  }
   .pill{
     @apply inline-flex items-center px-5 py-2 rounded-full text-sm text-pretty bg-secondary-green-light text-secondary-green-extradark font-medium;
   }
   .header {
-    @apply bg-secondary-green-extradark md:bg-none md:absolute top-0 left-0 w-full px-2 xl:px-0;
+    @apply bg-secondary-green-extradark 2xl:bg-none 2xl:absolute top-0 left-0 w-full px-2 2xl:px-0;
     nav{
-      @apply flex md:max-w-4/5 lg:max-w-11/12 mx-auto pt-2 md:pt-0 md:mt-10;
+      @apply flex 2xl:max-w-4/5 lg:max-w-11/12 mx-auto pt-2 2xl:pt-0 2xl:mt-10;
     }
     img {
       @apply h-5;
@@ -88,11 +91,12 @@
     @apply pt-5 lg:pt-0 bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70% text-white min-h-dvh flex items-center justify-center pb-5 md:pb-0;
   }
   .hero-container {
-    @apply md:max-w-4/5 lg:max-w-11/12 mx-auto grid lg:grid-cols-2 lg:gap-x-10 gap-y-4;
+    @apply md:mt-5 lg:w-full lg:max-w-11/12 2xl:max-w-4/5 lg:max-w-11/12 mx-auto grid xl:grid-cols-2 lg:gap-x-10 gap-y-4;
   }
   .hero-text {
+    @apply xl:flex flex-col justify-start 2xl:gap-y-14 text-left h-full;
     h2 {
-      @apply text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-4;
+      @apply text-3xl md:text-4xl 2xl:text-5xl font-semibold leading-tight mb-4 2xl:max-w-2/3;
     }
   }
   .hero-numbers {
@@ -100,10 +104,10 @@
   }
   .hero-number {
     h3 {
-      @apply text-xl md:text-2xl mb-2 font-semibold;
+      @apply text-2xl md:text-2xl xl:text-4xl mb-2 font-semibold;
     }
     p {
-      @apply text-sm text-pretty leading-tight mr-10 md:mr-0;
+      @apply text-sm xl:text-base text-pretty leading-tight mr-10 md:mr-0;
     }
   }
   .hero-cta {
@@ -114,11 +118,14 @@
     h3 {
       @apply text-lg font-semibold mb-4;
     }
-    input, textarea {
+   input, textarea, select {
       @apply w-full p-2 mb-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green text-sm;
     }
-    label{
+    label {
       @apply block mb-2 text-sm font-medium text-gray-700;
+    }
+    button[type="submit"] {
+      @apply mx-auto;
     }
   }
   /* Partners */

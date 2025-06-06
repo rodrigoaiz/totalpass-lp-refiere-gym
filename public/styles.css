@@ -214,6 +214,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -229,35 +232,35 @@
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+  .h-18 {
+    height: calc(var(--spacing) * 18);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-22 {
+    height: calc(var(--spacing) * 22);
+  }
+  .h-42 {
+    height: calc(var(--spacing) * 42);
+  }
+  .w-42 {
+    width: calc(var(--spacing) * 42);
+  }
   .w-full {
     width: 100%;
   }
   .max-w-2\/3 {
     max-width: calc(2/3 * 100%);
-  }
-  .-rotate-12 {
-    rotate: calc(12deg * -1);
-  }
-  .-rotate-45 {
-    rotate: calc(45deg * -1);
-  }
-  .rotate-2 {
-    rotate: 2deg;
-  }
-  .rotate-12 {
-    rotate: 12deg;
-  }
-  .rotate-45 {
-    rotate: 45deg;
-  }
-  .rotate-90 {
-    rotate: 90deg;
-  }
-  .rotate-\[12\] {
-    rotate: 12;
-  }
-  .rotate-\[40\] {
-    rotate: 40;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -271,14 +274,8 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-end {
-    justify-content: flex-end;
-  }
   .gap-x-8 {
     column-gap: calc(var(--spacing) * 8);
-  }
-  .text-center {
-    text-align: center;
   }
   .text-xs {
     font-size: var(--text-xs);
@@ -501,11 +498,11 @@
     @media (width >= 64rem) {
       max-width: calc(11/12 * 100%);
     }
-    @media (width >= 64rem) {
-      column-gap: calc(var(--spacing) * 10);
-    }
     @media (width >= 80rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (width >= 80rem) {
+      column-gap: calc(var(--spacing) * 10);
     }
     @media (width >= 96rem) {
       max-width: calc(4/5 * 100%);
@@ -618,6 +615,9 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
+    }
+    @media (width >= 80rem) {
+      margin-left: calc(var(--spacing) * 10);
     }
     h3 {
       margin-bottom: calc(var(--spacing) * 4);

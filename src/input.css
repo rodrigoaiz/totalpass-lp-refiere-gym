@@ -69,10 +69,10 @@
     @apply text-primary-black font-poppins;
   }
   button {
-    @apply block px-3 py-2 lg:px-6 lg:py-3 rounded-4xl text-sm font-normal transition-all hover:scale-105 cursor-pointer;
+    @apply block px-5 py-2 lg:px-6 lg:py-3 rounded-4xl text-xl font-normal transition-all hover:scale-105 cursor-pointer;
   }
   section{
-    @apply px-2 xl:px-0;
+    @apply px-5 xl:px-0;
   }
   .btn-primary {
     @apply bg-primary-green hover:bg-primary-green/75 text-secondary-green-extradark;
@@ -81,7 +81,7 @@
     @apply border border-primary-green text-primary-green hover:bg-primary-green/10;
   }
   .btn-xl {
-    @apply xl:text-xl;
+    @apply xl:text-2xl;
   }
   .pill{
     @apply inline-flex items-center px-5 py-2 rounded-full text-sm text-pretty bg-secondary-green-light text-secondary-green-extradark font-medium;
@@ -89,7 +89,7 @@
   .header {
     @apply bg-secondary-green-extradark 2xl:bg-none 2xl:absolute top-0 left-0 w-full px-2 2xl:px-0;
     nav{
-      @apply flex justify-center md:justify-start 2xl:max-w-4/5 lg:max-w-11/12 mx-auto pt-2 2xl:pt-0 2xl:mt-10;
+      @apply flex justify-center lg:justify-start 2xl:max-w-4/5 lg:max-w-11/12 mx-auto pt-2 2xl:pt-0 2xl:mt-10;
     }
     img {
       @apply h-5;
@@ -100,12 +100,12 @@
     @apply pt-8 lg:pt-0 bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70% text-white min-h-dvh flex items-center justify-center pb-5 xl:pb-0;
   }
   .hero-container {
-    @apply md:mt-5 lg:w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-10 gap-y-4;
+    @apply md:mt-5 2xl:mt-0 lg:w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-10 gap-y-4;
   }
   .hero-text {
-    @apply xl:flex flex-col justify-start 2xl:gap-y-14 text-left h-full;
+    @apply xl:flex flex-col justify-between 2xl:gap-y-14 text-left h-full;
     h2 {
-      @apply text-3xl md:text-4xl 2xl:text-5xl font-semibold leading-tight mb-4;
+      @apply text-3xl md:text-4xl 2xl:text-5xl font-semibold leading-tight;
     }
   }
   .hero-numbers {
@@ -127,23 +127,30 @@
     }
   }
   .hero-cta {
-    @apply flex flex-col md:flex-row  my-8 md:mt-10 gap-5;
+    @apply flex flex-col md:flex-row my-5 md:my-0 md:pb-5 2xl:mb-0 gap-5;
   }
   .hero-form {
     @apply bg-white text-gray-800 py-3 px-4 md:p-6 rounded-2xl shadow-lg xl:ml-10;
     h3 {
-      @apply text-lg font-semibold mb-4;
+      @apply text-xl font-semibold mb-7;
     }
   }
   .form-grid {
-      @apply md:grid grid-cols-2 gap-x-8;
+      @apply md:grid grid-cols-2 gap-x-10;
+      input, textarea, select {
+         @apply w-full px-4 py-2 bg-gray-200 mt-1 mb-4 md:mb-6 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary-green text-[0.75rem];
+       }
+       label {
+         @apply block text-base md:text-sm font-medium text-gray-700;
+       }
+       button {
+        @apply my-2
+       }
+       .form-button{
+        @apply flex items-center justify-center xl:items-end;
+       }
     }
-   input, textarea, select {
-      @apply w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green text-sm;
-    }
-    label {
-      @apply block mb-2 text-sm font-medium text-gray-700;
-    }
+
   /* Partners */
   .partners {
     @apply pt-2 md:pt-10;
@@ -230,8 +237,11 @@
     @apply max-w-7xl mx-auto;
 
   }
+  .what-is-contact{
+    @apply xl:mt-18;
+  }
   .what-is-lead {
-    @apply text-3xl md:text-4xl md:max-w-2/3 leading-tight font-semibold text-pretty my-10;
+    @apply text-3xl md:text-4xl md:max-w-2/3 leading-tight font-semibold text-pretty;
     span {
       @apply text-primary-green;
     }

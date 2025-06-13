@@ -721,23 +721,21 @@
     align-items: center;
     row-gap: calc(var(--spacing) * 4);
     text-align: center;
-    @media (width >= 48rem) {
+    @media (width >= 40rem) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
     }
     div {
       display: flex;
-      height: calc(var(--spacing) * 14);
+      height: calc(var(--spacing) * 20);
       width: 100%;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
     img {
-      --tw-brightness: brightness(100%);
+      width: calc(10/12 * 100%);
+      --tw-brightness: brightness(150%);
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-      @media (width >= 40rem) {
-        max-width: calc(var(--spacing) * 20);
-      }
       @media (width >= 48rem) {
         object-fit: cover;
       }

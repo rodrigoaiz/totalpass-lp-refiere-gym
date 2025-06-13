@@ -156,12 +156,12 @@
     @apply pt-2 md:pt-10;
   }
   .partners-logos{
-    @apply grid grid-cols-2 gap-y-4 md:grid-cols-6 text-center max-w-7xl mx-auto items-center;
+    @apply grid grid-cols-2 gap-y-4 sm:grid-cols-6 text-center max-w-7xl mx-auto items-center;
     div{
-      @apply flex w-full items-center justify-center h-14 overflow-hidden
+      @apply flex w-full items-center justify-center h-20 overflow-hidden
     }
     img {
-     @apply brightness-100 sm:max-w-20 md:object-cover;
+     @apply brightness-150 w-10/12  md:object-cover;
     }
     .logos-chaparros{
       @apply max-h-10;

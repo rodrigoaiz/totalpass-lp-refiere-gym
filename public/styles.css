@@ -523,13 +523,13 @@
   .hero-text {
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
     @media (width >= 80rem) {
       display: flex;
     }
     @media (width >= 96rem) {
-      row-gap: calc(var(--spacing) * 14);
+      row-gap: calc(var(--spacing) * 12);
     }
     h2 {
       font-size: var(--text-3xl);
@@ -549,15 +549,22 @@
     }
   }
   .hero-numbers {
+    margin-block: calc(var(--spacing) * 5);
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: calc(var(--spacing) * 5);
     row-gap: calc(var(--spacing) * 3);
     @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 7);
+    }
+    @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     @media (width >= 48rem) {
       row-gap: calc(var(--spacing) * 6);
+    }
+    @media (width >= 96rem) {
+      margin-block: calc(var(--spacing) * 0);
     }
     > article:last-child {
       grid-column: span 3 / span 3;

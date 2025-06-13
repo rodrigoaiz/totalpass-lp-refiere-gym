@@ -103,13 +103,13 @@
     @apply md:mt-5 2xl:mt-0 lg:w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-10 gap-y-4;
   }
   .hero-text {
-    @apply xl:flex flex-col justify-between 2xl:gap-y-14 text-left h-full;
+    @apply xl:flex flex-col justify-center 2xl:gap-y-12 text-left h-full;
     h2 {
       @apply text-3xl md:text-4xl 2xl:text-5xl font-semibold leading-tight;
     }
   }
   .hero-numbers {
-    @apply grid grid-cols-2  md:grid-cols-3 gap-y-3 md:gap-y-6 gap-x-5;
+    @apply grid grid-cols-2 my-5 md:my-7 2xl:my-0 md:grid-cols-3 gap-y-3 md:gap-y-6 gap-x-5;
     > article:last-child {
        @apply col-span-3;
      }
